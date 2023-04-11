@@ -11,11 +11,11 @@ import Image from "next/image";
 
 //import  '@/styles/header.scss';
 //import WordMover from "../More/moveword";
-import WordMover from "../More/WordMover";
+import WordMover from "../WordMover/WordMover";
 
 
 //import { useWordMoverContext2 } from "../More/Try2/wordContext2";
-import { useWordMoverContext } from "../More/wordContext2";
+import { useWordMoverContext } from "../WordMover/wordContext2";
 
 
 
@@ -47,13 +47,14 @@ const Header = ({text}:any ) => {
 
             
          
-            
+            {/*
             <div className="scroll-container">
                 <div className="scroll-text">welcome to site</div>
 
-            </div>
-            <div className="flex mb-8">
-                <WordMover word="god" duration={20000} />
+                </div>
+            */}
+            <div className="flex">
+                <WordMover word="Welcome to the site" duration={15000} />
                 </div>
                 
             
@@ -74,10 +75,12 @@ const Header = ({text}:any ) => {
                         </div>
                       
                     </div>
-                    <div className="content-center items-center">
-                        <button onClick={toggleAnimation} className="">
-                                {isPaused ? 'Resume' : 'Pause'}
-                            </button>
+                    <div className="  flex justify-center border border-white m-4">
+                       
+                        <button onClick={toggleAnimation} className=" font-mono">
+                                {isPaused ? 'Resume the word flow' : 'Pause the word flow'}
+                        </button>
+                        
                         </div>
 
 

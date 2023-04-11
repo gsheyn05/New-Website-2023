@@ -38,15 +38,19 @@ const WordMover: React.FC<WordMoverProps> = ({ word, duration }) => {
   }, [duration, isPaused]);
 
   const wordStyle: React.CSSProperties = {
-    position: 'absolute',
+    display:"flex",
+   
     whiteSpace: 'nowrap',
       transform: `translateX(${position}px)`,
-    fontFamily:"monospace"
+    fontFamily: "monospace",
+  
   };
 
   return (
     <>
+      <div className="">
       <div style={wordStyle}>{word}</div>
+      </div>
     
     </>
   );
