@@ -10,7 +10,12 @@ import Image from "next/image";
 //import styles from '@/styles/header.scss'
 
 //import  '@/styles/header.scss';
+//import WordMover from "../More/moveword";
+import WordMover from "../More/WordMover";
 
+
+//import { useWordMoverContext2 } from "../More/Try2/wordContext2";
+import { useWordMoverContext } from "../More/wordContext2";
 
 
 
@@ -33,15 +38,23 @@ const Header = ({text}:any ) => {
         //console.log(x)
     //},[x])
 
+    const { isPaused, toggleAnimation,setPosition } = useWordMoverContext();
+
 
     return (
+        
         <header >
 
             
          
+            
             <div className="scroll-container">
-                <div className="scroll-text font-mono">{text}</div>
+                <div className="scroll-text">welcome to site</div>
+
             </div>
+            <div className="flex mb-8">
+                <WordMover word="god" duration={20000} />
+                </div>
                 
             
 
@@ -56,15 +69,23 @@ const Header = ({text}:any ) => {
                         <div>
                             <a href="">
                                 <AiFillLinkedin size={30} />
-                                </a>
+                            </a>
+                            
+                        </div>
+                      
+                    </div>
+                    <div className="content-center items-center">
+                        <button onClick={toggleAnimation} className="">
+                                {isPaused ? 'Resume' : 'Pause'}
+                            </button>
                         </div>
 
-                    </div>
 
                 </div>
             </div>
 
         </header>
+        
     )
     
 }

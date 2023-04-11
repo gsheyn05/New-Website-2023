@@ -8,7 +8,7 @@ import { useMousePosition } from '@/Functions/functions'
 import { GetScreenType } from '@/Functions/functions'
 import { motion } from "framer-motion";
 import useScreenType from 'react-screentype-hook'
-
+import Link from 'next/link'
 const inter = Inter({ subsets: ['latin'] })
 
  const Home=()=> {
@@ -60,9 +60,13 @@ const inter = Inter({ subsets: ['latin'] })
       )
       }
       
-      <Header text="welcome to the website!" />
+      <Header  />
+      
       <main>
         <div>
+          <Link href="/about">
+          <p>about</p>
+          </Link>
          
           
 
