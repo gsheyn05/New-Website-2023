@@ -14,18 +14,16 @@ const inter = Inter({ subsets: ['latin'] })
  const Home=()=> {
    const god = true;
    const [mobile,setMobile]=useState(true)
-  const x = useMousePosition()
+   const x = useMousePosition() as null|any
     
 
-  const xoffset = x.x - 20;
-  const yoffset = x.y - 20;
+   const xoffset = x.x - 20;
+   const yoffset = x.y - 20;
  
    useEffect(() => {
     if (typeof window !== 'undefined') {
-      // You now have access to `window`
-      // eslint-disable-next-line react-hooks/rules-of-hooks
-      //const screenType = useScreenType();
-      //console.log(screenType);
+      
+      //Cause of Next SSR you gotta do this baloney
      const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       console.log(isMobileDevice())
       if (isMobileDevice()) {
