@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+
 import Header from '../Components/PartsofHomePage/header'
 import React,{useEffect,useState} from 'react'
 import { useMousePosition } from '@/Functions/functions'
@@ -9,10 +9,13 @@ import { GetScreenType } from '@/Functions/functions'
 import { motion } from "framer-motion";
 import useScreenType from 'react-screentype-hook'
 import Link from 'next/link'
+
+
 const inter = Inter({ subsets: ['latin'] })
 
  const Home=()=> {
    const god = true;
+   const [extra,setExtraDesc]=useState(false)
    const [mobile,setMobile]=useState(true)
    const x = useMousePosition() as null|any
     
@@ -63,14 +66,28 @@ const inter = Inter({ subsets: ['latin'] })
       <Header  />
       
       <main>
-        <div>
-          <Link href="/about">
-          <p>about</p>
-          </Link>
+       
+    
+        <div className="  h-1/2 w-1/2 border-white border-2   m-auto left-0 right-0 mt-10 lg:mt-20 ">
+          
+          <motion.div animate={{ x: 40,y:25 ,margin:"auto" }} className="mb-4 lg:mb-60 " >
+                    <p className="font-mono text-centre  m-auto" >Welcome!</p>
+                </motion.div>
+                
+          <motion.div animate={{y:20}} className="mb-4  " >
+
+          <Link href="/about" className=" flex border-white border-2 mt-10">
+          <p className="m-auto font-mono">about</p>
+            </Link>
          
           
-
-        </div>
+          <Link href="/about" className=" flex border-white border-2 mt-10 mb-40">
+          <p className="m-auto font-mono">in the now (need to make real)</p>
+          </Link>
+          </motion.div>
+            
+          </div>
+    
 
       
 
