@@ -70,8 +70,8 @@ const inter = Inter({ subsets: ['latin'] })
     
         <div className="  h-1/2 w-1/2 border-white border-2   m-auto left-0 right-0 mt-10 lg:mt-20 ">
           
-          <motion.div animate={{ x: 40,y:25 ,margin:"auto" }} className="mb-4 lg:mb-60 " >
-                    <p className="font-mono text-centre  m-auto" >Welcome!</p>
+          <motion.div animate={{ y:20,margin:"auto" }} className="mb-4 m-auto lg:mb-60 " >
+                    <p className="font-mono text-center " >Welcome!</p>
                 </motion.div>
                 
           <motion.div animate={{y:20}} className="mb-4  " >
