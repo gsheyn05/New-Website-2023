@@ -9,15 +9,19 @@ import React, { createContext, useContext, useState, useCallback, useEffect } fr
 //But still very cool for boiler plating
 
 interface WordMoverContextValue {
-  position: number|undefined;
-  setPosition: React.Dispatch<React.SetStateAction<number|undefined>>;
+  word: string;
+  position: number | undefined;
+  setPosition: React.Dispatch<React.SetStateAction<number | undefined>>;
+  setWord: React.Dispatch<React.SetStateAction<string>>
   isPaused: boolean;
   toggleAnimation: () => void;
 }
 
 const WordMoverContext = createContext<WordMoverContextValue>({
+  word: "",
   position: 0,
-  setPosition: () => {},
+  setPosition: () => { },
+  setWord: () => {},
   isPaused: false,
   toggleAnimation: () => {},
 });
@@ -29,18 +33,19 @@ export const WordMoverProvider: React.FC<Props> = ({ children }) => {
   //const initialPosition = useClientSideState<number>(window.innerWidth);
   const [position, setPosition] = useState<number|undefined>();
   const [isPaused, setIsPaused] = useState<boolean>(false);
-
+  const [word,setWord]=useState<string>("Welcome to the site")
   const toggleAnimation = useCallback(() => {
     setIsPaused((prevIsPaused) => !prevIsPaused);
   }, []);
 
   useEffect(() => {
     setPosition(window.innerWidth);
+    
   }, []);
 
   return (
     <WordMoverContext.Provider
-      value={{ position, setPosition, isPaused, toggleAnimation }}
+      value={{word, position, setPosition,setWord, isPaused, toggleAnimation }}
     >
       {children}
     </WordMoverContext.Provider>

@@ -6,9 +6,9 @@ interface WordMoverProps {
   duration: number;
 }
 
-const WordMover: React.FC<WordMoverProps> = ({ word, duration }) => {
+const WordMover: React.FC<WordMoverProps> = ({  duration }) => {
   const requestRef = useRef<number>();
-  const { position, setPosition, isPaused, toggleAnimation } = useWordMoverContext();
+  const { word,position, setPosition, isPaused, toggleAnimation } = useWordMoverContext();
 
   const animate = (timestamp: number) => {
     if (!isPaused) {
