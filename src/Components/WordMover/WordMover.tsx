@@ -35,7 +35,7 @@ const WordMover: React.FC<WordMoverProps> = ({  duration }) => {
         cancelAnimationFrame(requestRef.current);
       }
     };
-  }, [duration, isPaused]);
+  }, [animate, duration, isPaused]);
 
   const wordStyle: React.CSSProperties = {
     display:"flex",

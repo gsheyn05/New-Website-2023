@@ -81,13 +81,14 @@ const inter = Inter({ subsets: ['latin'] })
             </Link>
          
           
-          <Link href="/about" className=" flex border-white border-2 mt-10">
-          <p className="m-auto font-mono">in the now (need to make real)</p>
+          
+            <Link href="/contact" className=" flex border-white border-2 mt-10 ">
+          <p className="m-auto font-mono">Contact</p>
             </Link>
             
-            <Link href="/contact" className=" flex border-white border-2 mt-10 mb-40">
-          <p className="m-auto font-mono">Contact</p>
-          </Link>
+            <Link href="/about" className=" flex border-white border-2 mt-10 mb-20">
+          <p className="m-auto font-mono">in the now (still in Dev)</p>
+            </Link>
           </motion.div>
             
           </div>

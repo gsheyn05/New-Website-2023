@@ -1,7 +1,8 @@
-import React,{useState,useRef} from "react";
+import React,{useState,useRef,useEffect} from "react";
 import Header from "@/Components/PartsofHomePage/header";
 import Link from "next/link";
 import { useWordMoverContext } from "@/Components/WordMover/wordContext2";
+import { useMousePosition } from "@/Functions/functions";
 /*
 const Sections : React.FC=({}) => {
     const [expand, setExpand] = useState(false)
@@ -56,7 +57,27 @@ export const About = () => {
 
     const { word, setWord } = useWordMoverContext();
     const [expand, setExpand] = useState(false)
+    
+    const [mobile, setMobile] = useState(true)
+    const x = useMousePosition() as null|any
+    
 
+    const xoffset = x.x - 20;
+    const yoffset = x.y - 20;
+
+    useEffect(() => { //Need to fix this while scrolling
+        if (typeof window !== 'undefined') {
+          
+          //Cause of Next SSR you gotta do this baloney
+         const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          console.log(isMobileDevice())
+          if (isMobileDevice()) {
+            setMobile(false)
+    
+          }
+        }
+       
+     })
 
   
     const goToref = (id: number) => {
@@ -79,6 +100,8 @@ export const About = () => {
     return (
         <div className=" font-mono text-center">
             <Header />
+           
+      
             <h1 className="text-center underline text-xl">About</h1>
           
            

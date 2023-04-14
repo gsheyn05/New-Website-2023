@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-
+import React, { useState,useEffect } from "react";
+import { useMousePosition } from "@/Functions/functions";
 
 import Header from "@/Components/PartsofHomePage/header";
 const Contact = () => {
@@ -7,7 +7,28 @@ const Contact = () => {
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState("");
     const [message, setMessage] = useState("");
-     
+    
+    const [mobile, setMobile] = useState(true)
+    const x = useMousePosition() as null|any
+    
+
+    const xoffset = x.x - 20;
+    const yoffset = x.y - 20;
+
+
+    useEffect(() => {
+        if (typeof window !== 'undefined') {
+          
+          //Cause of Next SSR you gotta do this baloney
+         const isMobileDevice = () => /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+          console.log(isMobileDevice())
+          if (isMobileDevice()) {
+            setMobile(false)
+    
+          }
+        }
+       
+     })
     const validate = () => {
         if (fullname.length == 0 || fullname.length > 100) {
             alert("Please enter a full name")
@@ -56,6 +77,22 @@ const Contact = () => {
     return (
         <div className=" font-mono text-center">
             <Header />
+
+            {mobile&& (
+        < div style={{
+        position: "absolute",
+        left: `${xoffset}px`,
+        top: `${yoffset}px`,
+        width: 50,
+        height: 50,
+        borderWidth: 1,
+        borderColor: "white",
+        borderRadius: 40,
+        pointerEvents: "none"
+      }}>
+    </div>
+      )
+      }
             <div >
                 <h1 className="text-xl underline">Contact Me</h1>
                 <form
@@ -79,7 +116,7 @@ const Contact = () => {
               setFullname(e.target.value);
             }}
             name="fullname"
-            className="bg-transparent border py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 lg:w-1/2 lg:m-auto"
+            className="bg-transparent border py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-white lg:w-1/2 lg:m-auto"
           />
          
 
@@ -96,7 +133,7 @@ const Contact = () => {
             onChange={(e) => {
               setEmail(e.target.value);
             }}
-            className="bg-transparent border py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 lg:w-1/2 lg:m-auto"
+            className="bg-transparent border py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-white lg:w-1/2 lg:m-auto"
           />
           
 
@@ -113,7 +150,7 @@ const Contact = () => {
             onChange={(e) => {
               setSubject(e.target.value);
             }}
-            className="bg-transparent  border py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-gray-500 lg:w-1/2 lg:m-auto"
+            className="bg-transparent  border py-2 pl-4 focus:outline-none focus:rounded-md focus:ring-1 ring-green-500 font-light text-white lg:w-1/2 lg:m-auto"
           />
          
           <label
