@@ -66,13 +66,13 @@ const Header = ({text}:any ) => {
                     <p className="font-mono text-center " >Gregory Sheyn</p>
                     <p className="font-mono text-center">Software Engineer</p>
                     </Link>
-                    <div className="flex-row  place-content-center m-auto mt-4 ">
+                    <div className="flex-row  place-content-center m-auto mt-4 justify-center ">
                         
-                        <div className="flex-row flex place-content-center gap-2 m-auto">
-                            <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer" className="m-auto">
+                        <div className="flex-row flex place-content-center gap-2 m-auto ">
+                            <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer" className="">
                                 <AiFillLinkedin size={30} />
                             </a>
-                            <a href="https://github.com/gsheyn05"  target="_blank" rel="noopener noreferrer" className="m-auto">
+                            <a href="https://github.com/gsheyn05"  target="_blank" rel="noopener noreferrer" className="">
                                 <AiFillGithub size={30} />
                             </a>
                             
