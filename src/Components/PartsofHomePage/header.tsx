@@ -67,7 +67,9 @@ const Header = ({text}:any ) => {
                     <p className="font-mono text-center">Software Engineer</p>
                     </Link>
                     <div className=" mt-4 justify-center m-auto ">
-                        
+                        {
+                            //These stupid icons are messing with vercel
+                        }
                         <div className="flex-row flex  " style={{gap:5}}>
                             <div>
                                 <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer" className="">
