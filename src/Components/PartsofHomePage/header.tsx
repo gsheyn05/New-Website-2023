@@ -66,9 +66,9 @@ const Header = ({text}:any ) => {
                     <p className="font-mono text-center " >Gregory Sheyn</p>
                     <p className="font-mono text-center">Software Engineer</p>
                     </Link>
-                    <div className="flex-row  place-content-center">
+                    <div className="flex-row  place-content-center m-auto mt-4 ">
                         
-                        <div className="flex-row flex place-content-center gap-2">
+                        <div className="flex-row flex place-content-center gap-2 m-auto">
                             <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer">
                                 <AiFillLinkedin size={30} />
                             </a>
@@ -79,7 +79,7 @@ const Header = ({text}:any ) => {
                         </div>
                         
                     </div>
-                    <div className="  flex justify-center border border-white m-4">
+                    <div className="  flex justify-center border border-white m-4 m-auto mt-4">
                        
                         <button onClick={toggleAnimation} className=" font-mono">
                                 {isPaused ? 'Resume the word flow' : 'Pause the word flow'}
