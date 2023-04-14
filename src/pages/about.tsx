@@ -2,7 +2,7 @@ import React,{useState,useRef} from "react";
 import Header from "@/Components/PartsofHomePage/header";
 import Link from "next/link";
 import { useWordMoverContext } from "@/Components/WordMover/wordContext2";
-
+/*
 const Sections : React.FC=({}) => {
     const [expand, setExpand] = useState(false)
     
@@ -49,6 +49,7 @@ const Sections : React.FC=({}) => {
     
     
 }
+*/
 export const About = () => {
     const genRef = useRef<null | HTMLDivElement>(null); //eh remember there being a better way but fine
     const skillsRef = useRef<null | HTMLDivElement>(null); 
@@ -117,10 +118,10 @@ export const About = () => {
             <div className="mt-10  m-auto lg:w-1/2" ref={genRef}>
                 <h1 className="underline mb-2 text-lg">General</h1>
                 <p>I am a Full Stack Software Engineer based out of NYC</p>
-                <p>I started my foray into Software Engineering while pursuing a bachelor's in  Computer Science and Economics at
+                <p className="m-2">I started my foray into Software Engineering while pursuing a bachelors in  Computer Science and Economics at
                 McGill University (Start Date in September of 2019 and graduated in May of 2022)</p>
-                <p>Within University I held multiple internships and delved into many aspects of Software Development from Natural Language Processing Models to simple general AI models such as Neural Networks </p>
-                <p>Post university I took my first full-time job as a Founding Engineer at Carousel  Developing a web platform in React with TypeScript and a backend running on node.js, as well as an app platform using React Native</p>
+                <p className="m-2">Within University I held multiple internships and delved into many aspects of Software Development and CS from Natural Language Processing Models , simple general AI models such as Neural Networks to Turing Machines.  </p>
+                <p className="m-2">Post university I took my first full-time job as a Founding Engineer at Carousel  Developing a web platform in React with TypeScript and a backend running on node.js, as well as an app platform using React Native</p>
                 <p>For a more thorough description please click here to see my  <a className="text-blue-400 underline" href="/Resume.pdf"  target="_blank" rel="noopener noreferrer">Resume</a></p>
     
             </div>

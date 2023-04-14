@@ -2,6 +2,7 @@
 import React, { useEffect } from "react";
 
 import { AiFillLinkedin } from 'react-icons/ai'
+import {AiFillGithub} from 'react-icons/ai'
 import Link from "next/link";
 import Image from "next/image";
 //import './header.scss'
@@ -65,15 +66,18 @@ const Header = ({text}:any ) => {
                     <p className="font-mono text-center " >Gregory Sheyn</p>
                     <p className="font-mono text-center">Software Engineer</p>
                     </Link>
-                    <div className="flex  place-content-center">
+                    <div className="flex-row  place-content-center">
                         
-                        <div>
-                            <a href="">
+                        <div className="flex-row flex place-content-center gap-2">
+                            <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer">
                                 <AiFillLinkedin size={30} />
+                            </a>
+                            <a href="https://github.com/gsheyn05"  target="_blank" rel="noopener noreferrer">
+                                <AiFillGithub size={30} />
                             </a>
                             
                         </div>
-                      
+                        
                     </div>
                     <div className="  flex justify-center border border-white m-4">
                        

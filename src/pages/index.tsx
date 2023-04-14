@@ -77,12 +77,16 @@ const inter = Inter({ subsets: ['latin'] })
           <motion.div animate={{y:20}} className="mb-4  " >
 
           <Link href="/about" className=" flex border-white border-2 mt-10">
-          <p className="m-auto font-mono">about</p>
+          <p className="m-auto font-mono">About</p>
             </Link>
          
           
-          <Link href="/about" className=" flex border-white border-2 mt-10 mb-40">
+          <Link href="/about" className=" flex border-white border-2 mt-10">
           <p className="m-auto font-mono">in the now (need to make real)</p>
+            </Link>
+            
+            <Link href="/contact" className=" flex border-white border-2 mt-10 mb-40">
+          <p className="m-auto font-mono">Contact</p>
           </Link>
           </motion.div>
             
