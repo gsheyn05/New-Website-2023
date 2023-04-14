@@ -70,7 +70,7 @@ const Contact = () => {
             htmlFor="fullname"
             className="text-gray-500 font-light mt-8 dark:text-gray-50"
           >
-            Full name<span className="text-red-500 ">*</span>
+                        Full name<span className={ fullname.length==0 || fullname.length>100?'text-red-500':'hidden'}>*</span>
           </label>
           <input
             type="text"
@@ -87,7 +87,7 @@ const Contact = () => {
             htmlFor="email"
             className="text-gray-500 font-light mt-4 dark:text-gray-50 mb-2"
           >
-            E-mail<span className="text-red-500">*</span>
+                        E-mail<span className={email.length == 0|| email.length>100?'text-red-500':'hidden'}>*</span>
           </label>
           <input
             type="email"
@@ -104,7 +104,7 @@ const Contact = () => {
             htmlFor="subject"
             className="text-white font-light mt-4 dark:text-gray-50  mb-2 "
           >
-            Subject<span className="text-red-500 ">*</span>
+            Subject<span className={subject.length==0 ||subject.length>100?"text-red-500":"hidden"}>*</span>
           </label>
           <input
             type="text"
@@ -120,7 +120,7 @@ const Contact = () => {
             htmlFor="message"
             className="text-white font-light mt-4 dark:text-gray-50 mb-2"
           >
-            Message<span className="text-red-500">*</span>
+            Message<span className={message.length==0 ?'text-red-500':'hidden'}>*</span>
           </label>
           <textarea
             name="message"
