@@ -81,8 +81,8 @@ const Header = ({text}:any ) => {
                     </div>
                     <div className="  flex justify-center border border-white m-4 m-auto mt-4">
                        
-                        <button onClick={toggleAnimation} className=" font-mono">
-                                {isPaused ? 'Resume the word flow' : 'Pause the word flow'}
+                        <button onClick={toggleAnimation} className=" font-mono m-auto">
+                               <p className="text-center"> {isPaused ? 'Resume the word flow' : 'Pause the word flow'}</p> 
                         </button>
                         
                         </div>
