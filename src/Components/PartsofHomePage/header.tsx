@@ -70,10 +70,10 @@ const Header = ({text}:any ) => {
                         
                         <div className="flex-row flex place-content-center gap-2 m-auto justify-center ">
                             <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer" className="">
-                                <AiFillLinkedin size={30} />
+                                <AiFillLinkedin size={30} className="m-auto" />
                             </a>
                             <a href="https://github.com/gsheyn05"  target="_blank" rel="noopener noreferrer" className="">
-                                <AiFillGithub size={30} />
+                                <AiFillGithub size={30} className="m-auto"  />
                             </a>
                             
                         </div>
