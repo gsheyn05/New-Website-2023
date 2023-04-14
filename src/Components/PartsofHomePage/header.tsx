@@ -69,8 +69,9 @@ const Header = ({text}:any ) => {
                     <div className=" mt-4 justify-center m-auto ">
                         {
                             //These stupid icons are messing with vercel
+                            //dont know why it made me resort to using style variables
                         }
-                        <div className="flex-row flex  " style={{gap:5}}>
+                        <div className="flex-row flex  " style={{gap:5,margin:"auto",justifyContent:"center"}}>
                             <div>
                                 <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer" className="">
                                     <AiFillLinkedin size={30}  />
