@@ -69,12 +69,16 @@ const Header = ({text}:any ) => {
                     <div className=" mt-4 justify-center m-auto ">
                         
                         <div className="flex-row flex gap-2 ">
-                            <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer" className="">
-                                <AiFillLinkedin size={30}  />
-                            </a>
-                            <a href="https://github.com/gsheyn05"  target="_blank" rel="noopener noreferrer" className="">
-                                <AiFillGithub size={30} className="m-auto"  />
-                            </a>
+                            <div>
+                                <a href="https://www.linkedin.com/in/gregory-s-833a4719a/"  target="_blank" rel="noopener noreferrer" className="">
+                                    <AiFillLinkedin size={30}  />
+                                </a>
+                            </div>
+                            <div>
+                                <a href="https://github.com/gsheyn05"  target="_blank" rel="noopener noreferrer" className="">
+                                    <AiFillGithub size={30} className="m-auto"  />
+                                </a>
+                            </div>
                             
                         </div>
                         
